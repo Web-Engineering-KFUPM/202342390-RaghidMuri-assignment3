@@ -87,3 +87,28 @@ function updateVisitTime() {
 
 updateVisitTime();
 setInterval(updateVisitTime, 1000);
+
+// Toggle and remember the selected color theme
+const themeToggle = document.getElementById("theme-toggle");
+const savedTheme = localStorage.getItem("theme");
+
+function applyTheme(theme) {
+  const isLightMode = theme === "light";
+
+  document.body.classList.toggle("light-mode", isLightMode);
+  themeToggle.setAttribute(
+    "aria-label",
+    isLightMode ? "Switch to dark mode" : "Switch to light mode"
+  );
+  themeToggle.setAttribute("aria-pressed", isLightMode);
+}
+
+applyTheme(savedTheme);
+
+themeToggle.addEventListener("click", function() {
+  const isLightMode = document.body.classList.contains("light-mode");
+  const newTheme = isLightMode ? "dark" : "light";
+
+  applyTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
+});

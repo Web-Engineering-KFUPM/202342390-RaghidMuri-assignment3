@@ -4,12 +4,18 @@ body {
   background-color: #000000;
   color: #9aa4b2;
   font-family: monospace;
-  
+
   margin: 0;
   padding: 0 32px;
 
   line-height: 1.6;
   letter-spacing: 0.5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #334155;
 }
 
 /* Headings */
@@ -21,6 +27,12 @@ h3 {
   letter-spacing: 0.5px;
 }
 
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3 {
+  color: #111827;
+}
+
 /* Links */
 a {
   color: #9ca3af;
@@ -28,6 +40,14 @@ a {
 }
 a:hover {
   color: #f3f4f6;
+}
+
+body.light-mode a {
+  color: #475569;
+}
+
+body.light-mode a:hover {
+  color: #111827;
 }
 
 /* Header and navigation */
@@ -53,10 +73,40 @@ header {
   white-space: nowrap;
 }
 
+body.light-mode .weather-info,
+body.light-mode .visit-time {
+  color: #334155;
+}
+
 nav {
   display: flex;
+  align-items: center;
   gap: 24px;
 }
+
+#theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.theme-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+#theme-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
 
 
 /* Main sections */
@@ -85,10 +135,6 @@ section {
 
 #projects h2 {
   margin-bottom: 30px;
-}
-
-#weather-info {
-  color: #f5f7fa;
 }
 
 /* Keep project images responsive so they shrink on smaller screens */
