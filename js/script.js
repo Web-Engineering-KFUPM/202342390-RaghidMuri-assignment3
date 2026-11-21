@@ -46,3 +46,28 @@ contactForm.addEventListener("submit", function(event) {
     formMessage.textContent = "Message submitted successfully.";
   }
 });
+
+// Fetch and display the current temperature from the Open-Meteo weather API
+async function loadWeather() {
+  const weatherInfo = document.getElementById("weather-info");
+  const latitude = 26.3927;
+  const longitude = 50.1131;
+
+  try {
+    const response = await fetch(
+      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m`
+    );
+
+    if (!response.ok) {
+      throw new Error("Weather request failed");
+    }
+
+    const data = await response.json();
+    weatherInfo.textContent =
+      `Current temperature in Dhahran: ${data.current.temperature_2m}\u00B0C`;
+  } catch (error) {
+    weatherInfo.textContent = "Unable to load weather.";
+  }
+}
+
+loadWeather();

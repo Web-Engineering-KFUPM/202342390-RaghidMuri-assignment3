@@ -32,7 +32,17 @@ a:hover {
 
 /* Header and navigation */
 header {
+  position: relative;
   padding: 32px 0;
+}
+
+.weather-info {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  margin: 0;
+  color: #f5f7fa;
+  white-space: nowrap;
 }
 
 nav {
@@ -69,7 +79,9 @@ section {
   margin-bottom: 30px;
 }
 
-
+#weather-info {
+  color: #f5f7fa;
+}
 
 /* Keep project images responsive so they shrink on smaller screens */
 
