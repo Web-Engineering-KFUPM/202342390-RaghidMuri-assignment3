@@ -2,72 +2,60 @@
 
 ## Tools Used & Use Cases
 
-I used ChatGPT while working on this assignment.
+I used GitHub Copilot while working on Assignment 3. The exported Copilot conversation used two models: **MAI Code 2 Flash** and **GPT-6 Luna**. These were both used within **one conversation**, not separate conversations.
 
-I mainly used it for:
+I mainly used Copilot for:
 
-- Helping implement the new interactive features
-- Explaining JavaScript concepts I found confusing
-- Helping add the Show/Hide Description feature
-- Helping add contact form validation
-- Helping add user feedback messages
-- Giving suggestions for simple animations and transitions
-- Debugging HTML, CSS, and JavaScript issues
-- Reviewing the project structure
-- Helping improve the README and technical documentation
+- Helping integrate the Open-Meteo weather API and display Dhahran's temperature
+- Moving the weather information into the top-right area of the header
+- Helping implement a timer showing how long a visitor has stayed on the site
+- Adding and explaining light/dark theme switching with `localStorage`
+- Investigating weather text colors in light mode
+- Improving the theme toggle's appearance, icons, and accessibility attributes
+- Explaining JavaScript concepts such as `document.getElementById()`, `fetch()`, and theme switching
+- Adjusting image markup, including `loading="lazy"` and `decoding="async"`
 
-For example, I used ChatGPT to understand how event listeners work, how to show and hide content when a button is clicked, how to prevent a form from reloading the page, and how to validate form input using JavaScript.
+For example, I asked Copilot to put the weather information in the header instead of a separate section, then asked it to explain the JavaScript. I also requested changes to the theme toggle so that it used an icon rather than a text label.
 
 ## Benefits & Challenges
 
-Using ChatGPT helped me understand the new JavaScript features faster and gave me ideas for how to make the portfolio more interactive without making it too complicated.
+GitHub Copilot helped me add functionality to my existing portfolio and understand the JavaScript behind it. Its explanations were useful for learning how API requests, DOM updates, timers, and saved theme preferences work.
 
-It was especially useful when I needed explanations for how different parts of the code worked, such as `event.preventDefault()`, button click events, and checking form input.
+One challenge was the appearance of the weather text in light mode. I asked Copilot to investigate and adjust the styling so that it would be readable. Another challenge was choosing the appearance of the theme toggle. I requested different icon and border designs to match the portfolio.
 
-One challenge was that some suggestions were more complicated than what I wanted for my website. I sometimes had to simplify or reject suggestions so the project stayed close to my original design.
-
-I also had to test the code myself because not every suggestion automatically matched the structure of my existing Assignment 1 project.
+I reviewed the suggestions instead of treating the first answer as final. I asked follow-up questions when I did not understand the code or when a change did not produce the appearance I wanted.
 
 ## Learning Outcomes
 
-While using AI, I learned more about:
+While using Copilot, I learned more about:
 
-- JavaScript event listeners
-- Showing and hiding webpage content
-- Changing button text using JavaScript
-- Form validation
-- Giving users error and success messages
-- Preventing the default form submission behavior
-- Using CSS transitions for hover effects
-- Improving an existing project instead of starting from scratch
+- Requesting and displaying external API data using `fetch()` and `async`/`await`
+- Handling API failures with `try`/`catch`
+- Finding and updating HTML elements using `document.getElementById()` and `textContent`
+- Tracking elapsed time with `Date.now()` and `setInterval()`
+- Managing and remembering the selected theme with `localStorage`
+- Adding and removing CSS classes with `classList.toggle()`
+- Using `aria-label` and `aria-pressed` for an icon-based toggle button
+- Improving image loading with `loading="lazy"` and `decoding="async"`
+- Reviewing AI-generated code and requesting revisions to fit an existing design
 
-I also became more comfortable understanding how HTML, CSS, and JavaScript work together to create interactive behavior.
+I also improved my understanding of how HTML, CSS, and JavaScript work together in a portfolio website.
 
 ## Responsible Use & Modifications
 
-I reviewed the AI-generated suggestions before adding them to my project and changed them when needed.
+I directed Copilot's work through specific requests and reviewed the proposed code and changes.
 
-I did not use every suggestion exactly as it was given. For example, I chose to hide the existing project descriptions instead of adding completely new project details because that matched my design better.
+For the weather feature, I asked for the temperature to appear in the top-right of the header instead of in a separate weather section. For theme management, I requested a remembered light/dark selection and later asked to change the toggle from a text-based button to an icon-based design. When the weather text did not look right in light mode, I asked for further styling changes.
 
-I also kept the animation simple by using a navigation link color transition instead of adding more complicated effects.
+For the project images, I used Squoosh to compress the files separately and used Copilot to help adjust the image markup, including adding lazy-loading and asynchronous-decoding attributes. I also requested an adjustment to the File Integrity Checker image presentation.
 
-For the contact form, I tested different cases such as empty fields, invalid email input, and valid input to make sure the feedback messages worked correctly.
-
-I also asked for explanations when I did not understand parts of the code before using them.
-
-The AI was used as a support tool, but I made the final decisions, tested the features, and modified the code to fit my own project.
+Where suggested code met my needs, I did not change it only for the sake of changing it. I reviewed the code and asked questions so I could understand it. I checked the portfolio's appearance and behavior in the browser. Performance testing with Lighthouse was also performed.
 
 ## Usage Log
 
 | ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
 |----|--------------|------|---------|----------------|------------------------------------------|
-| C01 | ChatGPT (GPT-5.6 Sol) | 2026-10-19 | Main Assignment 2 conversation for planning, coding help, explanations, debugging, and documentation | `index.html`, `css/styles.css`, `js/script.js`, `README.md`, `docs/technical-documentation.md`, `docs/ai-usage-report.md` | I reviewed the suggestions and modified them to fit my existing portfolio and design. I verified the changes by testing the website in the browser. |
-| A01 | ChatGPT (GPT-5.6 Sol) | 2026-10-19 | Helped create the Show/Hide Description feature for the projects | `index.html`, `css/styles.css`, `js/script.js` | I chose to hide the existing project descriptions instead of adding new project details. I tested both project buttons to make sure each description could be shown and hidden correctly. |
-| A02 | ChatGPT (GPT-5.6 Sol) | 2026-10-19 | Helped create contact form validation and user feedback | `index.html`, `js/script.js` | The original suggestion checked for empty fields. I then asked to add validation for an email address containing `@`. I tested empty fields, invalid email input, and valid input to make sure the correct messages appeared. |
-| A03 | ChatGPT (GPT-5.6 Sol) | 2026-10-19 | Suggested a smooth hover transition for the navigation links | `css/styles.css` | I changed the transition duration from `0.3s` to `0.7s` because I preferred the slower and more noticeable effect. I verified it by hovering over the navigation links in the browser. |
-| A04 | ChatGPT (GPT-5.6 Sol) | 2026-10-19 | Helped improve the Assignment 2 README | `README.md` | I reviewed the generated content and kept or changed sections so they accurately described my project. I checked the README after the changes to make sure the instructions and features matched the website. |
-| A05 | ChatGPT (GPT-5.6 Sol) | 2026-10-19 | Helped write the Assignment 2 technical documentation | `docs/technical-documentation.md` | I reviewed the documentation and adjusted it to match the features I actually implemented. I compared the documentation with my HTML, CSS, and JavaScript files. |
-| A06 | ChatGPT (GPT-5.6 Sol) | 2026-10-19 | Helped write and update the AI usage report | `docs/ai-usage-report.md` | I reviewed the report and made sure it accurately described how I used AI during the assignment and the changes I made to AI suggestions. |
+| C01 | GitHub Copilot (MAI Code 2 Flash; GPT-6 Luna) | 21-11-2026 | One exported conversation covering weather API integration, visitor timer, remembered theme switching, toggle icons, CSS debugging, and image-loading improvements. Related commits: `313969f`, `987231f`, `5cc83db`, `6bac4af`. | `index.html`, `css/styles.css`, `js/script.js` | I read and reviewed the generated code and asked Copilot to explain unfamiliar JavaScript. I changed the weather display from a separate section to the top-right of the header, adjusted the theme toggle to use an icon, and investigated the weather text color in light mode. Where the timer and API logic already met my needs, no further changes were necessary. I opened the portfolio in the browser to review the weather display, timer, theme control, and layout. I compressed the project images with Squoosh, reviewed the updated image markup, and ran Lighthouse to examine performance. Related changes are recorded in the listed commits. |
 
 ## Declaration
 
@@ -75,18 +63,17 @@ I declare that this report and the attached evidence document all of my AI use i
 
 **Name:** Raghid Muri  
 **Student ID:** 202342390  
-**Date:** 2026-10-19  
-
+**Date:** 21-11-2026
 
 ## AI-Assisted Commits
 
-The following Assignment 2 commits contained AI-assisted work:
+The following Assignment 3 commits contain GitHub Copilot-assisted work:
 
-- `9830149` - Added Buttons For Project Description
-- `79fc984` - Added Form Validation and FeedBack
-- `dfd86b2` - Added hover animation for links
-- `24505da` - ReadMe and technical documentation
-- `05d9ee5` - AI Usage Report
-- `51162d2` - Ai usage report updated
+- `313969f` - Added weather API to get weather in Dhahran — GitHub Copilot (MAI Code 2 Flash)
+- `987231f` - Added Counter to display how long a person has stayed on the site — GitHub Copilot (MAI Code 2 Flash)
+- `5cc83db` - Added feature to remember/switch between modes — GitHub Copilot (MAI Code 2 Flash and GPT-6 Luna)
+- `6bac4af` - Changed Images to become compressed & Improved Performance Overall — GitHub Copilot (GPT-6 Luna)
 
-These commits were created before the updated AI declaration requirement was announced. The repository does not allow force-pushing, so the existing commit messages could not be rewritten. The AI-assisted work is documented in the Usage Log above.
+The conversation is recorded as **C01** because it is one exported Copilot chat even though more than one model was used. Each listed commit includes an `Assisted-by` attribution. The original Copilot conversation export should be kept complete and unedited in the AI evidence submitted separately on Blackboard.
+
+The Assignment 2 files were copied into this repository as the starting point for Assignment 3. Their earlier AI usage was documented with Assignment 2.
