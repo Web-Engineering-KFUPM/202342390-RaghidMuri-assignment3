@@ -169,7 +169,7 @@ I tested the website by:
 - Checking that the correct form feedback messages appear
 - Checking that the current temperature in Dhahran appears in the header
 - Observing the visitor timer update while the page is open
-- Switching between light and dark modes and checking the text and icon appearance
+- Switching between light and dark modes and checking the text appearance
 - Checking the navigation link hover transition
 - Using Lighthouse to check page performance
 - Checking the browser console for errors
