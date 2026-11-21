@@ -71,3 +71,19 @@ async function loadWeather() {
 }
 
 loadWeather();
+
+// Track how long the visitor has been on the page during this visit
+const visitTime = document.getElementById("visit-time");
+const startTime = Date.now();
+
+function updateVisitTime() {
+  const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
+  const minutes = Math.floor(elapsedSeconds / 60);
+  const seconds = elapsedSeconds % 60;
+
+  visitTime.textContent =
+    `Time on site: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
+
+updateVisitTime();
+setInterval(updateVisitTime, 1000);
